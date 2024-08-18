@@ -116,7 +116,7 @@ Route::get('/form/layouts-horizontal', [HorizontalForm::class, 'index'])->name('
 Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic');
 
 // Admin Page Route prefix admin
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index']);
     Route::get('/login', [DashboardController::class, 'viewlogin']);
     Route::post('/login', [DashboardController::class, 'login']);
