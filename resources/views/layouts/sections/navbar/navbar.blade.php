@@ -39,9 +39,6 @@ $navbarDetached = ($navbarDetached ?? '');
                 <!-- Search -->
                 <div class="navbar-nav align-items-center">
                     <div class="nav-item d-flex align-items-center">
-                        <i class="bx bx-search fs-4 lh-0"></i>
-                        <input type="text" class="form-control border-0 shadow-none ps-1 ps-sm-2"
-                            placeholder="Search..." aria-label="Search...">
                     </div>
                 </div>
                 <!-- /Search -->
@@ -78,7 +75,7 @@ $navbarDetached = ($navbarDetached ?? '');
                                 <div class="dropdown-divider"></div>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="javascript:void(0);">
+                                <a class="dropdown-item" href="/admin/logout">
                                     <i class='bx bx-power-off me-2'></i>
                                     <span class="align-middle">Log Out</span>
                                 </a>

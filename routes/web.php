@@ -118,6 +118,9 @@ Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic')
 // Admin Page Route prefix admin
 Route::prefix('admin')->group(function () {
     Route::get('/', [DashboardController::class, 'index']);
+    Route::get('/login', [DashboardController::class, 'viewlogin']);
+    Route::post('/login', [DashboardController::class, 'login']);
+    Route::get('/logout', [DashboardController::class, 'logout']);
     Route::resource('property', AdminPropertyController::class);
 });
 
@@ -137,7 +140,7 @@ Route::get('/contact', function () {
 
 Route::get('/virtual-tour/{id}', [VirtualTourController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [DashboardController::class, 'login']);
 
 Route::get("/zip-form",[ZipController::class,"zipUploadForm"]);
 Route::post("/extract-zip",[ZipController::class,"extractUploadedZip"]);

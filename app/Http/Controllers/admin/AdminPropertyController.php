@@ -45,7 +45,6 @@ class AdminPropertyController extends Controller
                 'listrik' => $request->listrik,
                 'sertifikat' => $request->sertifikat,
                 'kamar_tidur' => $request->kamar_tidur,
-                'kamar_tidur' => $request->kamar_tidur,
                 'kamar_mandi' => $request->kamar_mandi,
                 'harga' => $request->harga,
                 'gambar' => $gambar,
