@@ -118,7 +118,7 @@ Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic')
 // Admin Page Route prefix admin
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, 'index']);
-    Route::get('/login', [DashboardController::class, 'viewlogin']);
+    Route::get('/login', [DashboardController::class, 'viewlogin'])->name('login');
     Route::post('/login', [DashboardController::class, 'login']);
     Route::get('/logout', [DashboardController::class, 'logout']);
     Route::resource('property', AdminPropertyController::class);
